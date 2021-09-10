@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>particles.js</title>
+
+    <!-- Import style.css from root directory -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+</head>
+
+<body>
+    <!-- Particles.js div -->
+    <div id="particles-js">
+        <div class="heading">
+            <h1>Not Another Hunt</h1>
+            <h3>
+                This is Not Just Another Hunt.
+            </h3>
+            <br><br><br>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="gooey">
+                        <!-- in="sourceGraphic" -->
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                        <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                        <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                    </filter>
+                </defs>
+            </svg>
+
+            <div class="button-holder">
+                <div id="gooey-button">
+                    Click to Check!
+                    <span class="bubbles">
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    <span class="bubble"></span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Import Particles.js and app.js files -->
+    <script src="/src/js/particles.js-master/particles.js">
+    </script>
+    <script src="/src/js/particles.js-master/demo/js/app.js">
+    </script>
+</body>
+
+</html>
