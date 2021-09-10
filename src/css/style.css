@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Euclid Circular';
+    src: url(Euclid\ Circular\ A\ Medium.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: darkslategray;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: none;
+    font-family: 'Euclid Circular A Medium';
+}
+
 svg {
     position: absolute;
     top: -4000px;
@@ -10,6 +31,8 @@ svg {
 }
 
 #gooey-button {
+    pointer-events: fill;
+    cursor: none;
     padding: 1rem;
     font-size: 1.3rem;
     border: none;
@@ -18,11 +41,8 @@ svg {
     filter: url("#gooey");
     position: relative;
     background-color: #00e23f;
-    width: 10%;
-}
-
-#gooey-button:focus {
-    outline: none;
+    width: 190px;
+    border-radius: 25px;
 }
 
 #gooey-button .bubbles {
@@ -43,8 +63,16 @@ svg {
     z-index: -1;
 }
 
+#gooey-button:hover {
+    background-color: #e2c000;
+}
+
+#gooey-button:hover>.bubbles .bubble {
+    background-color: #e2c000;
+}
+
 #gooey-button .bubbles .bubble:nth-child(1) {
-    left: 49px;
+    left: 149px;
     width: 25px;
     height: 25px;
     -webkit-animation: move-1 3.02s infinite;
@@ -94,7 +122,7 @@ svg {
 }
 
 #gooey-button .bubbles .bubble:nth-child(6) {
-    left: 1459px;
+    left: 149px;
     width: 25px;
     height: 25px;
     -webkit-animation: move-6 3.12s infinite;
@@ -466,41 +494,58 @@ svg {
 
 /*# sourceMappingURL=styje.css.map */
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: darkslategray;
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    max-width: 100vw;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow-x: hidden;
+@media screen and (min-width: 910px) {
+    .hero {
+        pointer-events: none;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        /* width: auto; */
+        background: rgba(200, 200, 200, 0.5);
+        border-radius: 25px;
+        padding: 2rem 4rem;
+    }
+    .hero h1 {
+        color: limegreen;
+        font-size: 3.5rem;
+    }
+    .hero h3 {
+        font-size: 1.5rem;
+        color: wheat;
+        font-size: 20px;
+    }
 }
 
-.heading {
-    position: absolute;
-    text-align: center;
-    top: 30%;
-    width: 100%;
-}
-
-.heading h1 {
-    color: limegreen;
-    font-size: 70px;
-}
-
-.heading h3 {
-    color: wheat;
-    font-size: 20px;
+@media screen and (max-width: 910px) {
+    .hero {
+        pointer-events: none;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: rgba(200, 200, 200, 0.5);
+        padding: 2rem 4rem;
+        width: 100%;
+    }
+    .hero h1 {
+        color: limegreen;
+        font-size: 2.5rem;
+    }
+    .hero h3 {
+        font-size: 1rem;
+        color: wheat;
+        font-size: 20px;
+    }
 }
 
 #particles-js {
     background: black;
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
